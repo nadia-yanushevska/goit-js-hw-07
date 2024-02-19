@@ -23,8 +23,8 @@ class Storage {
         this.#items.push(newItem);
     }
     removeItem(itemToRemove) {
-        this.#items.forEach((item, idx) => {
-            if (item === itemToRemove) this.#items.splice(idx, 1);
+        this.#items.forEach((item, idx, array) => {
+            if (item === itemToRemove) array.splice(idx, 1);
         });
     }
 }
