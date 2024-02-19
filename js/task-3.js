@@ -1,84 +1,21 @@
-console.log('Task3:');
+console.log('Task3');
+/**
+ * Напиши клас StringBuilder, який приймає один параметр initialValue — довільний рядок, який записується у приватну властивість 
+ * value об'єкта, що створюється.
+ * 
+ * Оголоси наступні методи класу:
+    getValue() — повертає поточне значення приватної властивості value.
+    padEnd(str) — отримує параметр str (рядок) і додає його в кінець значення приватної властивості value об'єкта, який викликає цей метод.
+    padStart(str) — отримує параметр str (рядок) і додає його на початок значення приватної властивості value об'єкта, який викликає цей метод.
+    padBoth(str) — отримує параметр str (рядок) і додає його на початок і в кінець значення приватної властивості value об'єкта, який викликає цей метод.
+ */
 
-const sortByDescendingFriendCount = users => {
-    return users.toSorted((firstUser, secondUser) => {
-        return secondUser.friends.length - firstUser.friends.length;
-    });
-};
-
-console.log(
-    sortByDescendingFriendCount([
-        {
-            name: 'Moore Hensley',
-            friends: ['Sharron Pace'],
-            gender: 'male',
-        },
-        {
-            name: 'Sharlene Bush',
-            friends: ['Briana Decker', 'Sharron Pace'],
-            gender: 'female',
-        },
-        {
-            name: 'Ross Vazquez',
-            friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-            gender: 'male',
-        },
-        {
-            name: 'Elma Head',
-            friends: ['Goldie Gentry', 'Aisha Tran'],
-            gender: 'female',
-        },
-        {
-            name: 'Carey Barr',
-            friends: ['Jordan Sampson', 'Eddie Strong'],
-            gender: 'male',
-        },
-        {
-            name: 'Blackburn Dotson',
-            friends: ['Jacklyn Lucas', 'Linda Chapman'],
-            gender: 'male',
-        },
-        {
-            name: 'Sheree Anthony',
-            friends: ['Goldie Gentry', 'Briana Decker'],
-            gender: 'female',
-        },
-    ])
-);
-// [
-//   {
-//     name: "Ross Vazquez",
-//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-//     gender: "male"
-//   },
-//   {
-//     name: "Sharlene Bush",
-//     friends: ["Briana Decker", "Sharron Pace"],
-//     gender: "female"
-//   },
-//   {
-//     name: "Elma Head",
-//     friends: ["Goldie Gentry", "Aisha Tran"],
-//     gender: "female"
-//   },
-//   {
-//     name: "Carey Barr",
-//     friends: ["Jordan Sampson", "Eddie Strong"],
-//     gender: "male"
-//   },
-//   {
-//     name: "Blackburn Dotson",
-//     friends: ["Jacklyn Lucas", "Linda Chapman"],
-//     gender: "male"
-//   },
-//   {
-//     name: "Sheree Anthony",
-//     friends: ["Goldie Gentry", "Briana Decker"],
-//     gender: "female"
-//   },
-//   {
-//     name: "Moore Hensley",
-//     friends: ["Sharron Pace"],
-//     gender: "male"
-//   }
-// ]
+// Testing:
+const builder = new StringBuilder('.');
+console.log(builder.getValue()); // "."
+builder.padStart('^');
+console.log(builder.getValue()); // "^."
+builder.padEnd('^');
+console.log(builder.getValue()); // "^.^"
+builder.padBoth('=');
+console.log(builder.getValue()); // "=^.^="

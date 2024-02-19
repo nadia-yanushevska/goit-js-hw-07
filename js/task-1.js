@@ -1,46 +1,39 @@
-console.log('Task1:');
+console.log('Task1');
+/**
+ * Перед звільненням розробник зламав вихідний код управління акаунтами користувачів нашого сервісу доставки їжі.
+ * Виконай рефакторинг методів об'єкта customer, розставивши відсутні this під час звернення до властивостей об'єкта.
+ *
+ * Використай цей стартовий код і виконай рефакторинг.
+ */
 
-const getUserNames = users =>
-    users.map(user => {
-        return user.name;
-    });
+// Testing:
+const customer = {
+    username: 'Mango',
+    balance: 24000,
+    discount: 0.1,
+    orders: ['Burger', 'Pizza', 'Salad'],
+    // Change code below this line
+    getBalance() {
+        return balance;
+    },
+    getDiscount() {
+        return discount;
+    },
+    setDiscount(value) {
+        discount = value;
+    },
+    getOrders() {
+        return orders;
+    },
+    addOrder(cost, order) {
+        balance -= cost - cost * discount;
+        orders.push(order);
+    },
+    // Change code above this line
+};
 
-console.log(
-    getUserNames([
-        {
-            name: 'Moore Hensley',
-            email: 'moorehensley@indexia.com',
-            balance: 2811,
-        },
-        {
-            name: 'Sharlene Bush',
-            email: 'sharlenebush@tubesys.com',
-            balance: 3821,
-        },
-        {
-            name: 'Ross Vazquez',
-            email: 'rossvazquez@xinware.com',
-            balance: 3793,
-        },
-        {
-            name: 'Elma Head',
-            email: 'elmahead@omatom.com',
-            balance: 2278,
-        },
-        {
-            name: 'Carey Barr',
-            email: 'careybarr@nurali.com',
-            balance: 3951,
-        },
-        {
-            name: 'Blackburn Dotson',
-            email: 'blackburndotson@furnigeer.com',
-            balance: 1498,
-        },
-        {
-            name: 'Sheree Anthony',
-            email: 'shereeanthony@kog.com',
-            balance: 2764,
-        },
-    ])
-); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, 'Steak');
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
