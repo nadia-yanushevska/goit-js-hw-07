@@ -23,9 +23,7 @@ class Storage {
         this.#items.push(newItem);
     }
     removeItem(itemToRemove) {
-        for (let i = 0; i < this.#items.length; i++) {
-            if (this.#items[i] === itemToRemove) this.#items.splice(i, 1);
-        }
+        this.#items = this.#items.filter(item => item !== itemToRemove);
     }
 }
 // Testing:
