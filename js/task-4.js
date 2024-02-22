@@ -1,6 +1,5 @@
 const user = {};
 const form = document.querySelector('.login-form');
-console.log(form);
 
 const submitBtn = form.lastElementChild;
 
