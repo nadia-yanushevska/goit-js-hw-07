@@ -11,6 +11,43 @@ body {
     color: #212121;
     line-height: 1.5;
 }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Task1 styles */
+#categories {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+.item {
+    border-radius: 8px;
+    padding: 16px;
+    width: 392px;
+
+    background-color: #f6f6fe;
+    color: #2e2f42;
+    letter-spacing: 0.04em;
+}
+.item-title {
+    font-weight: 600;
+    line-height: 1.33333;
+}
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.item-li {
+    width: 360px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+}
 
 /* Task2 styles */
 .gallery-li {

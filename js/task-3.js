@@ -6,6 +6,6 @@ const outputElem = body.querySelector('#name-output');
 inputElem.addEventListener('input', eventHandler);
 
 function eventHandler(e) {
-    const userName = e.target.value;
+    const userName = e.target.value.trim();
     outputElem.textContent = userName || 'Anonymous';
 }

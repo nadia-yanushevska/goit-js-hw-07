@@ -10,11 +10,15 @@ const createBtn = body.querySelector('button[data-create]');
 const destroyBtn = body.querySelector('button[data-destroy]');
 
 createBtn.addEventListener('click', onCreateBtn);
-destroyBtn.addEventListener('click', destroyBoxes);
+destroyBtn.addEventListener('click', onDestroyBtn);
 
 // clears the container
 function destroyBoxes() {
     boxContainer.innerHTML = '';
+}
+
+function onDestroyBtn() {
+    destroyBoxes();
 }
 
 // checks if input is valid, then destroys previously created boxes and creates new ones

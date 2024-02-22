@@ -39,7 +39,8 @@ const gallery = document.querySelector('.gallery');
 gallery.innerHTML = imagesTemplate(images);
 
 // gallery styles
-gallery.style.listStyleType = 'none';
 gallery.style.display = 'flex';
 gallery.style.flexWrap = 'wrap';
-gallery.style.gap = '12px';
+gallery.style.justifyContent = 'center';
+gallery.style.gap = '24px';
+gallery.style.rowGap = '48px';
