@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 
-const inputElem = body.children['name-input'];
+const inputElem = body.children['name-input']; // querySelector('#name-input')
 const outputElem = body.querySelector('#name-output');
 
 inputElem.addEventListener('input', eventHandler);

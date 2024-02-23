@@ -11,8 +11,8 @@ changeColorBtn.addEventListener('click', colorGenerator);
 function colorGenerator(e) {
     const newColor = getRandomHexColor();
 
-    const body = e.target.parentElement.parentElement;
-    const colorDesc = e.target.previousElementSibling.firstElementChild;
+    const body = e.target.parentElement.parentElement; // document.body
+    const colorDesc = e.target.previousElementSibling.firstElementChild; //document.querySelector('.color');
 
     body.style.backgroundColor = newColor;
     colorDesc.textContent = newColor;
